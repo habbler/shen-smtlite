@@ -2,6 +2,8 @@
 
 A Shen reimplementation of [smtlite's design](https://github.com/Sing-Security/smtlite), with an SMT-LIB front end for a subset of quantifier-free bit-vector formulas. The CNF encoder and watched-literal DPLL solver are typechecked. The front end walks the Shen reader's raw S-expressions and checks SMT sorts before it calls the core.
 
+See the [roadmap](ROADMAP.md) for the remaining work toward smtlite parity.
+
 ## Run
 
 From this directory on Windows, with the Shen/JIT distribution in a sibling directory as shown:
