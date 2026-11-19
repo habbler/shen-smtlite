@@ -1,0 +1,11 @@
+; Model extraction, backtracking, modular arithmetic, and a contradictory assertion.
+(set-logic QF_BV)
+(set-option :produce-models true)
+(declare-const x (_ BitVec 3))
+(declare-fun y () Bool)
+(assert (or (not y) (= x #b000)))
+(assert (= (bvadd x #b011) (_ bv1 3)))
+(check-sat)
+(get-value (x y))
+(assert y)
+(check-sat)

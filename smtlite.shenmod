@@ -1,0 +1,7 @@
+(shen.module
+  (version 1)
+  (name smtlite)
+  (requires buffer)
+  (typed)
+  (main smt.main)
+  (sources tc+ "core.shen" tc- "smtlib.shen"))

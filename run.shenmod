@@ -1,0 +1,5 @@
+(shen.module
+  (version 1)
+  (name smtlite-run)
+  (requires smtlite)
+  (sources tc- "run.shen"))
