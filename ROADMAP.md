@@ -13,7 +13,8 @@ The current proof of concept implements a subset of QF_BV with a typed, sealed S
 
 - [ ] Add typed constructors for 1–64-bit expressions and validate operand widths when constructing them.
 - [ ] Represent reusable expressions as a shared graph. Fold constant expressions and encode each shared subexpression once.
-- [ ] Support model lookup by variable name across the full unsigned 64-bit range, and expose a dependency query by variable-name prefix, equivalent to upstream `depends_on`.
+- [ ] Return model values by variable name as fixed-width bit patterns, as the CLI already does with binary literals. Keep literal IDs, widths, and counters as Shen/JIT `fixnum` values.
+- [ ] Expose a dependency query by variable-name prefix, equivalent to upstream `depends_on`.
 - [ ] Add checking under temporary assumptions. Reuse the background encoding across checks, keep assumptions local to their query, and refresh the cache after declarations or assertions change.
 
 ## Search behavior and limits
