@@ -24,6 +24,8 @@ The fish example prints `sat`, reports `german` and `fish` at house 4, then prin
 - Bit-vector addition, subtraction, negation, bitwise operations, unsigned comparisons and concatenation.
 - `declare-const`, zero-argument `declare-fun`, `assert`, `check-sat`, `get-value` for declared names, `reset` and `exit`. Files may start with `(set-logic QF_BV)` and `(set-option :produce-models true)`.
 
+The width is the number of Boolean bits in an SMT value. The solver represents each bit as a SAT literal with a Shen/JIT `fixnum` ID and prints models as binary bit patterns.
+
 Use simple unquoted identifiers. Each `check-sat` rebuilds the search state from the accumulated clauses. The port uses chronological backtracking and a fixed variable order. Upstream features such as phase saving, resource budgets, and the remaining bit-vector operators are outside this version's scope.
 
 ## Verify
